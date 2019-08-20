@@ -1,0 +1,39 @@
+#:import MeshLinePlot kivy.garden.graph.MeshLinePlot
+<Graphics>:
+
+	button: button
+	text_input: text_input
+	BoxLayout:
+		orientation: 'vertical'
+		BoxLayout:
+			size_hint: 1, None
+			TextInput:
+				id:text_input
+				text: ""
+			Button:
+				id: button
+				on_press: root.get_formul()
+				text: "Run"
+		BoxLayout:
+
+			Graph:
+			    id: graph
+			    plot: MeshLinePlot
+			    xlabel:'X'
+			    ylabel:'Y'
+			    x_ticks_minor:5
+			    x_tics_major:1
+			    y_ticks_major:5
+			    y_grid_label:True
+			    x_grid_label:True
+			    padding:5
+			    xlog:False
+			    ylog:False
+			    x_grid:True
+			    y_grid:True
+			    xmin:-10
+			    xmax:10
+			    ymin:-15
+			    ymax:15
+		    
+	
